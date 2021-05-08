@@ -24,9 +24,9 @@ namespace A881457.Actividad02
                 {
                     Console.WriteLine("No se ingresó un código de aeropuerto. Por favor, intentelo nuevamente.");
                 }
-                else if (IngresoAeropuerto.Any(Char.IsDigit)) //Se valida que no se ingresen números.
+                else if (IngresoAeropuerto.Any(c => Char.IsNumber(c))) //Se valida que no se ingresen números.
                 {
-                    Console.WriteLine("Los aeropuertos se identifican con un código de 3 letras. Por favor, intentelor nuevamente.");
+                    Console.WriteLine("Los aeropuertos se identifican con un código de 3 letras. Por favor, intentelo nuevamente.");
                 }
 
                 else if (IngresoAeropuerto.Length != 3) //Se valida que las letras ingresadas no sean más de 3.
@@ -78,7 +78,7 @@ namespace A881457.Actividad02
                     {
                         Console.WriteLine("No se ingresó nada. Por favor, intentelo nuevamente.");
                     }
-                    else if (Destino.Any(Char.IsDigit)) 
+                    else if (Destino.Any(c => Char.IsNumber(c))) 
                     {
                         Console.WriteLine("El destino se debe identificar con un código de 3 letras. Por favor, intentelo nuevamente.");
                     }
@@ -152,7 +152,7 @@ namespace A881457.Actividad02
                     {
                         Console.WriteLine("No se ingresó nada. Por favor, intentelo nuevamente.");
                     }
-                    else if (OrigenReserva.Any(Char.IsDigit)) //Se valida que no se ingresen números.
+                    else if (OrigenReserva.Any(c => Char.IsNumber(c))) //Se valida que no se ingresen números.
                     {
                         Console.WriteLine("El destino se debe identificar con un código de 3 letras. Por favor, intentelo nuevamente.");
                     }
@@ -169,7 +169,7 @@ namespace A881457.Actividad02
                         {
                             Console.WriteLine("No se ingresó nada. Por favor, intentelo nuevamente.");
                         }
-                        else if (DestinoReserva.Any(Char.IsDigit)) //Se validan que no se ingresen números.
+                        else if (DestinoReserva.Any(c => Char.IsNumber(c))) //Se validan que no se ingresen números.
                         {
                             Console.WriteLine("El destino se debe identificar con un código de 3 letras. Por favor, intentelo nuevamente.");
                         }
